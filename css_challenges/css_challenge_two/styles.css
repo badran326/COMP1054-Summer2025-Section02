@@ -1,14 +1,16 @@
 /* Step 1: Define color variables using hex values or rgb values */
-/*:root { 
-    /* 1a -  a primary color */
-    /* 1b -  a secondary color */
-    /* 1c -  a text color */
-    /* 1d - the background color for the card */
-/*}*/ 
+
+:root { 
+    --primary-color: rgb(39, 52, 105);
+    --secondary-color: #E4D9FF;
+    --text-color: rgb(250, 250, 255);
+    --card-background: #1E2749;
+} 
 
 /* Step 2: Style the card */
 body {
     /* set background-color to the theme primary color */ 
+    background-color: var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,25 +21,55 @@ body {
 
 .profile-card {
     /* 2a - add a background color using var( )  */
+    background-color: var(--card-background);
     /* 2b - add a background image */
+    background-image: url(./img/back\ ground.jpg);
+    background-position: center;
+    background-size: cover;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-
     /* 2c - define the text color using  var( )*/
-    /* 2d - add a box shadow using rgba */ 
+    color: var(--text-color);
+    /* 2d - add a box shadow using rgba */
+    box-shadow: 0 8px 32px rgb(150, 75, 250, 0.5);
+  }
+
+  /*Hover box-shadow*/
+  .profile-card:hover {
+    /* 2d - add a box shadow using rgba */
+    box-shadow: 0 8px 64px rgba(75, 145, 250, 0.5);
   }
   
   /* Step 3: Add styles for the image and text */
     .avatar {
         border-radius: 50%;
         /*3a - set the border to 3px solid & secondary color */
-        /* border: */
+        border: 3px solid var(--secondary-color);
         width: 100px;
         height: 100px;
     }
 
     .bio {
         /* 3b -  set colour to secondary color */
-        /*color:*/
+        color: var(--secondary-color);
     }
+    
+/*Text animation using ChatGPT for help*/
+    @keyframes typing {
+  from { width: 0 }
+  to { width: 80% }
+}
+
+  @keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.profile-card:hover .text-animation{
+    /* Justify self to make the text stays center*/
+    justify-self: center;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--secondary-color);
+    animation: typing 2s steps(14), blink 0.7s step-end infinite;
+}

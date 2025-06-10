@@ -37,15 +37,15 @@ article img {
     padding-right: 3rem;
     max-height: 400px;
     max-width: 100%;
-    filter: opacity(10px);
-}
-
-article img:hover {
-    filter: none;
 }
 
 
 /* 2.  create a "sticky footer" (always at the bottom of the viewport*/
+
+footer {
+    position: sticky;
+    bottom: 0;
+}
 
 footer {
     position: fixed;
@@ -54,10 +54,37 @@ footer {
 
 /* 3.  style the navigation links */
 
+nav a:link {
+    color: #565656;
+    text-decoration: none;
+    font-size: 2.5rem;
+    padding: 2em 0;
+    margin-right: 2em;
+}
+
+nav a:visited {
+    color: #71503A;
+}
+
+nav a:focus {
+    border: 1px dotted #71503A;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+nav a:active {
+    border: 1px dotted #F5F5DC;
+
+}
+
 
 /*---------Web Typography------------ */
 
 /* STEP ONE -  set font size, line-height, line-length */ 
+
 
 h1 {
     font-size: 6rem;

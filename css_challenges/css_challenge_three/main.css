@@ -78,7 +78,7 @@ h2 {
 }
 
 .level4 .big {
-  flex: 1;
+  flex-grow: 1;
 }
 
 /* Level 5 – Full page layout using flexbox 

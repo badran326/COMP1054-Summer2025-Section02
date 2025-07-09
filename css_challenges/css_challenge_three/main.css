@@ -16,17 +16,17 @@ h2 {
 /* Level 1 – Use Flexbox to space items evenly in a row */
 .level1 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 1.6rem;
 }
 
 .level1 .box {
+  align-content: center;
+  text-align: center;
   width: 60px;
   height: 60px;
   background: #4682B4;
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Level 2 – Center one item in the middle of the container */
@@ -64,8 +64,9 @@ h2 {
   justify-content: center;
 }
 
-/* Level 4 – Flex-grow navigation bar */
+/* Level 4 – Flex-grow navigation bar - Goal: Make one .nav-item (with the .big class) grow to take up extra space in the navigation bar. */
 .level4 .nav-bar {
+  display: flex;
   background: #333;
   padding: 10px;
 }
@@ -77,13 +78,13 @@ h2 {
 }
 
 .level4 .big {
-  display: flex;
+  flex: 1;
 }
 
 /* Level 5 – Full page layout using flexbox 
   Goal: Use Flexbox to build a full-page layout.
   
-  Structure (Desktop Layout):
+Desktop Layout : 
   -----------------------------------------
   |               HEADER                  |
   -----------------------------------------
@@ -92,6 +93,7 @@ h2 {
   |               FOOTER                  |
   -----------------------------------------
 
+Mobile Layout : 
   -----------------------------------------
 |               HEADER                  |
 -----------------------------------------
@@ -115,7 +117,11 @@ h2 {
   padding: 10px;
 }
 
-.level5 .main {}
+.level5 .main {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
 
 .level5 .sidebar,
 .level5 .ads {
@@ -127,10 +133,14 @@ h2 {
 .level5 .content {
   padding: 10px;
   background: #eee;
+  flex: 1;
 }
 
 @media (max-width: 768px) {
-  .level5 .main {}
+  .level5 .main {
+    flex-direction: row;
+    text-align: center;
+  }
 
   .level5 .sidebar,
   .level5 .ads {

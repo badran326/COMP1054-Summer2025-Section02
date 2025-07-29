@@ -1,0 +1,40 @@
+/* General layout */
+body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    font-family: sans-serif;
+  }
+
+  .card {
+    border: 2px solid #ccc;
+    padding: 1rem;
+    resize: both;
+    overflow: auto;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 100%;
+  }
+
+  /* Step One - Enable container queries */
+  .card-inline {
+    
+  }
+
+  .card-size {
+
+  }
+
+  .content {
+    background-color: #eee;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  /* Step Two - Create Container Queries */ 
+  
+  /* Container query: WIDTH for .card-inline */
+
+  /* Container query: HEIGHT for .card-size */

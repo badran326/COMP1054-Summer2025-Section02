@@ -1,0 +1,76 @@
+/* ------  Without Nesting -------- */
+
+/* General Styles */
+
+body {
+    width: 90%;
+    margin: 0 auto;
+    font-family: "Open Sans", sans-serif;
+}
+
+/*navigation */
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #000;
+    color: #FFF;
+    padding: 1em 0;
+}
+
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-bottom: 2px;
+}
+
+nav a:link {
+    color: red;
+}
+
+nav a:visited {
+    color: #333;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #BADA55;
+}
+
+nav a:active {
+    color: #C0FFEE;
+}
+
+/* form */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    min-height: 30vh;
+}
+
+form .wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+form input {
+    border: #333 2px solid;
+}
+
+form label {
+    font-size: 1.25rem;
+}
+
+form label input {
+    border: #999 2px dashed;
+}
